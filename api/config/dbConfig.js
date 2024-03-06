@@ -3,14 +3,10 @@ const mongoose = require("mongoose");
 const dbConfig = {
   mongodb: {
     url: "mongodb://localhost:27017/blog",
-    options: {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    },
   },
 };
 
-mongoose.connect(dbConfig.mongodb.url, dbConfig.mongodb.options);
+mongoose.connect(dbConfig.mongodb.url);
 
 const db = mongoose.connection;
 
